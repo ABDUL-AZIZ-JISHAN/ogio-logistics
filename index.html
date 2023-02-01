@@ -16,7 +16,7 @@
     <!-- swipper css -->
     <link rel="stylesheet" href="assets/css/swipper.min.css" />
     <!-- Aos Css -->
-    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="assets/scss/main.css" />
     <!-- Responsive css -->
@@ -24,12 +24,107 @@
     <title>Logio - Logistics</title>
   </head>
   <body>
-    <main id="wrapper">
-      <div class="content">
+
+
+    <!-- preloader section start -->
+    <div id="preloader">
+      <svg
+        role="img"
+        aria-label="Mouth and eyes come from 9:00 and rotate clockwise into position, right eye blinks, then all parts rotate and merge into 3:00"
+        class="smiley"
+        viewBox="0 0 128 128"
+        width="128px"
+        height="128px"
+      >
+        <defs>
+          <clipPath id="smiley-eyes">
+            <circle
+              class="smiley__eye1"
+              cx="64"
+              cy="64"
+              r="8"
+              transform="rotate(-40,64,64) translate(0,-56)"
+            />
+            <circle
+              class="smiley__eye2"
+              cx="64"
+              cy="64"
+              r="8"
+              transform="rotate(40,64,64) translate(0,-56)"
+            />
+          </clipPath>
+          <linearGradient id="smiley-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="red" />
+            <stop offset="100%" stop-color="red" />
+          </linearGradient>
+          <mask id="smiley-mask">
+            <rect x="0" y="0" width="128" height="128" fill="red" />
+          </mask>
+        </defs>
+        <g
+          stroke-linecap="round"
+          stroke-width="12"
+          stroke-dasharray="175.93 351.86"
+        >
+          <g>
+            <rect
+              fill="black"
+              width="128"
+              height="64"
+              clip-path="url(#smiley-eyes)"
+            />
+            <g fill="none" stroke="black">
+              <circle
+                class="smiley__mouth1"
+                cx="64"
+                cy="64"
+                r="56"
+                transform="rotate(180,64,64)"
+              />
+              <circle
+                class="smiley__mouth2"
+                cx="64"
+                cy="64"
+                r="56"
+                transform="rotate(0,64,64)"
+              />
+            </g>
+          </g>
+          <g mask="url(#smiley-mask)">
+            <rect
+              fill="hsl(223,90%,50%)"
+              width="128"
+              height="64"
+              clip-path="url(#smiley-eyes)"
+            />
+            <g fill="none" stroke="hsl(223,90%,50%)">
+              <circle
+                class="smiley__mouth1"
+                cx="64"
+                cy="64"
+                r="56"
+                transform="rotate(180,64,64)"
+              />
+              <circle
+                class="smiley__mouth2"
+                cx="64"
+                cy="64"
+                r="56"
+                transform="rotate(0,64,64)"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <!-- preloader section end  -->
+
+    <main id="body-wrapper" data-scroll-container>
+      <div id="body-content" data-scroll-section>
         <!-- body wrapper start -->
 
         <!-- topbar section start -->
-        <section class="topbar">
+        <section class="topbar" data-aos="fade-down" data-aso-duration="1000">
           <div class="container">
             <div class="content">
               <div class="logo">
@@ -60,10 +155,19 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1>Transport <span>solutions</span> for your business</h1>
+                <h1 id="hero-text">
+                  <span data-aos>
+                    Transport <span class="colored">solutions</span>
+                  </span>
+                  <span data-aos>for your business</span>
+                </h1>
               </div>
               <!-- <div class="col-md-12"> -->
-              <p>
+              <p
+                data-aos="fade-up"
+                data-aso-duration="1000"
+                data-aos-delay="200"
+              >
                 We continue to pursue that same vision in today's complex,
                 uncertain world, working every day to earn our customers’
               </p>
@@ -72,26 +176,40 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="img-box">
-                  <img src="assets/img/herobg.png" alt="img" />
-                  <span class="border-text">logistics</span>
+                  <img
+                    data-aos
+                    data-aos-delay="200"
+                    src="assets/img/herobg.png"
+                    alt="img"
+                  />
+                  <span class="border-text" data-aos>logistics</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="img-bottom">
-                  <h3>
+                  <h3 data-aos="fade-up" data-aso-duration="1000">
                     Transport solutions for businesses to <span>solve</span> any
                     delivery problems
                   </h3>
                 </div>
                 <div class="bottom">
-                  <p>
+                  <p
+                    data-aos="fade-up"
+                    data-aso-duration="1000"
+                    data-aos-delay="00"
+                  >
                     Logistics is the process of efficiently moving goods from
                     Point A to Point B. Success demands minute attention to
                     detail, from packaging to warehousing to transportation.
                   </p>
-                  <a href="#0" class="btn-style-two"
+                  <a
+                    data-aos="fade-up"
+                    data-aso-duration="1000"
+                    data-aos-delay="50"
+                    href="#0"
+                    class="btn-style-two"
                     ><svg
                       width="48"
                       height="26"
@@ -116,7 +234,7 @@
                 </div>
               </div>
               <div class="col-md-8 offset-4">
-                <div class="transport-img">
+                <div class="transport-img" data-aos>
                   <img src="assets/img/transport.png" alt="img" />
                 </div>
               </div>
@@ -130,19 +248,30 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h2 class="count"><span class="counter">13</span>+</h2>
-                <h2>
-                 Years Service <br />
+                <h2 data-aos="fade-up" data-aso-duration="1000" class="count">
+                  <span class="counter">13</span>+
+                </h2>
+                <h2
+                  data-aos="fade-up"
+                  data-aso-duration="1000"
+                  data-aos-delay="50"
+                >
+                  Years Service <br />
                   Experienced
                 </h2>
               </div>
               <div class="col-md-12 learn-btn">
                 <div class="content">
-                  <p>
+                  <p data-aos="fade-up" data-aso-duration="1000">
                     We continue to pursue that same vision in today's complex,
                     uncertain world, working every day to earn our customer's
                   </p>
-                  <a href="#0" class="btn-style-two"
+                  <a
+                    data-aos="fade-up"
+                    data-aso-duration="1000"
+                    data-aos-delay="50"
+                    href="#0"
+                    class="btn-style-two"
                     >Learn more<svg
                       width="48"
                       height="26"
@@ -173,9 +302,11 @@
 
         <!-- logistic section start -->
         <section class="logistic">
-          <div class="title">Logistics</div>
+          <div class="title">
+            <h3 data-aos="zoom-in-up" data-aso-duration="1000">Logistics</h3>
+          </div>
           <div class="container">
-            <div class="row">
+            <div class="row" data-aos="fade-left" data-aso-duration="2000" data-aos-delay="500">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -199,6 +330,7 @@
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -209,7 +341,12 @@
         <section class="service">
           <div class="container">
             <div class="row justify-content-center text-center">
-              <div class="section-title">
+              <div
+                class="section-title"
+                data-aos="zoom-in"
+                data-aso-duration="1500"
+                data-aos-delay="50"
+              >
                 <div class="title">Services</div>
               </div>
             </div>
@@ -217,7 +354,11 @@
               <div class="col-md-12">
                 <ul>
                   <a href="#0" class="service-link">
-                    <li>
+                    <li
+                      data-aos="fade-up"
+                      data-aso-duration="1500"
+                      data-aos-delay="100"
+                    >
                       <span>01</span>
                       <h3>
                         <span
@@ -252,7 +393,11 @@
                     </li>
                   </a>
                   <a href="#0" class="serive-link">
-                    <li>
+                    <li
+                      data-aos="fade-up"
+                      data-aso-duration="1500"
+                      data-aos-delay="150"
+                    >
                       <img src="assets/img/service-truck.png" alt="img" />
                       <span>02</span>
                       <h3>
@@ -284,7 +429,11 @@
                     </li>
                   </a>
                   <a href="#0" class="serive-link">
-                    <li>
+                    <li
+                      data-aos="fade-up"
+                      data-aso-duration="1500"
+                      data-aos-delay="200"
+                    >
                       <img src="assets/img/service-truck.png" alt="img" />
                       <span>03</span>
                       <h3>
@@ -329,7 +478,12 @@
         <section class="feedback padding-110">
           <div class="container">
             <div class="row justify-content-center text-center">
-              <div class="section-title">
+              <div
+                class="section-title"
+                data-aos="zoom-in-up"
+                data-aso-duration="1500"
+                data-aos-delay="150"
+              >
                 <div class="title">Clients Feedback</div>
               </div>
             </div>
@@ -338,7 +492,12 @@
                 <div class="swiper-rating">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="item">
+                      <div
+                        class="item"
+                        data-aos="fade-up"
+                        data-aso-duration="1500"
+                        data-aos-delay="50"
+                      >
                         <h3>
                           Logio team is the best of the best, and expertly
                           trained team members who take the extra step and go
@@ -346,7 +505,12 @@
                           to deliver innovative and dynamic solutions to our
                           customers
                         </h3>
-                        <div class="desg">
+                        <div
+                          class="desg"
+                          data-aos="fade-up"
+                          data-aso-duration="1500"
+                          data-aos-delay="150"
+                        >
                           <h4>Disney Company</h4>
                           <div class="rating">
                             <svg
@@ -414,7 +578,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="btn-wrapper">
+                  <div
+                    class="btn-wrapper"
+                    data-aos="fade-up"
+                    data-aso-duration="1500"
+                    data-aos-delay="200"
+                  >
                     <div class="swiper-button-prev">
                       <svg
                         width="79"
@@ -471,10 +640,15 @@
             <div class="row">
               <div class="section-top">
                 <h3>
-                  Safe & Reliable <br />
-                  <span>Logistics</span> Support
+                  <span data-aos>Safe & Reliable <br></span>
+                  <span data-aos> <span class="colored">logistic</span> support</span>
                 </h3>
-                <div class="section-title">
+                <div
+                  class="section-title"
+                  data-aos="zoom-in"
+                  data-aso-duration="1500"
+                  data-aos-delay="150"
+                >
                   <h2 class="title">Get Quote</h2>
                 </div>
               </div>
@@ -482,15 +656,25 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="img-box">
-                  <img src="assets/img/con-log.png" alt="img" />
-                  <h3 class="border-text">Container</h3>
+                  <img
+                    src="assets/img/con-log.png"
+                    alt="img"
+                    data-aos="zoom-in-up"
+                    data-aso-duration="1500"
+                    data-aos-delay="150"
+                  />
+                  <h3 class="border-text" data-aos="border-text">Container</h3>
                 </div>
               </div>
             </div>
             <div class="row">
               <ul class="links">
                 <a href="#0">
-                  <li>
+                  <li
+                    data-aos="fade-up"
+                    data-aso-duration="1500"
+                    data-aos-delay="50"
+                  >
                     <p>
                       Get in touch <br />
                       with us
@@ -517,7 +701,11 @@
                   </li>
                 </a>
                 <a href="#0">
-                  <li>
+                  <li
+                    data-aos="fade-up"
+                    data-aso-duration="1500"
+                    data-aos-delay="100"
+                  >
                     <p>
                       Send your <br />
                       Requirement for <br />
@@ -553,46 +741,63 @@
         <!-- footer seciton start -->
         <section class="footer">
           <div class="container">
-           <div class="row">
-            <div class="col-lg-3">
-              <ul class="conversation">
-                <li>Start a conversation</li>
-                <li>
-                  <a href="tel:01794954633">(316) 555-0116</a>
-                </li>
-                <li>
-                  <a href="mailto:abdulazizjishan02@gmail.com">logio@mail.com</a>
-                </li>
-              </ul>
+            <div class="row">
+              <div class="col-lg-3" data-aos="fade-up" data-aso-duration="1500">
+                <ul class="conversation">
+                  <li>Start a conversation</li>
+                  <li>
+                    <a href="tel:01794954633">(316) 555-0116</a>
+                  </li>
+                  <li>
+                    <a href="mailto:abdulazizjishan02@gmail.com"
+                      >logio@mail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-3"
+                data-aos="fade-up"
+                data-aso-duration="1500"
+                data-aos-delay="50"
+              >
+                <ul class="services">
+                  <li>Services</li>
+                  <li>Air Freight</li>
+                  <li>Truck Freight</li>
+                  <li>Rail Freight</li>
+                  <li>Warehouse Freight</li>
+                  <li>ocean Freight</li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-3"
+                data-aos="fade-up"
+                data-aso-duration="1500"
+                data-aos-delay="100"
+              >
+                <ul class="adress">
+                  <li>Address</li>
+                  <li>
+                    <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-3"
+                data-aos="fade-up"
+                data-aso-duration="1500"
+                data-aos-delay="150"
+              >
+                <ul class="company">
+                  <li>Company</li>
+                  <li>About</li>
+                  <li>terms and conditions</li>
+                  <li>Industry solutions</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <ul class="services">
-                <li>Services</li>
-                <li>Air Freight</li>
-                <li>Truck Freight</li>
-                <li>Rail Freight</li>
-                <li>Warehouse Freight</li>
-                <li>ocean Freight</li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <ul class="adress">
-                <li>Address</li>
-                <li>
-                  <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <ul class="company">
-                <li>Company</li>
-                <li>About</li>
-                <li>terms and conditions</li>
-                <li>Industry solutions</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-           </div>
           </div>
         </section>
         <!-- footer section end -->
@@ -603,8 +808,8 @@
             <div class="row">
               <div class="content">
                 <p>Terms of service</p>
-              <p>Copyright © 2022 Musemind  | All rights reserved.</p>
-              <p>Privacy & Policy</p>
+                <p>Copyright © 2022 Musemind | All rights reserved.</p>
+                <p>Privacy & Policy</p>
               </div>
             </div>
           </div>
@@ -614,6 +819,7 @@
         <!-- body wrapper end -->
       </div>
     </main>
+
     <!-- Js scripts -->
     <!-- jquery -->
     <script src="assets/js/jquery.min.js"></script>
@@ -627,6 +833,11 @@
     <script src="assets/js/counter-up.min.js"></script>
     <!-- Aos Js -->
     <script src="assets/js/aos.min.js"></script>
+    <!-- gsap js -->
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/scrollTrigger.min.js"></script>
+    <!-- Magnet mouse  -->
+    <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script>
     <!-- custom js -->
     <script src="assets/js/custom.js"></script>
   </body>
