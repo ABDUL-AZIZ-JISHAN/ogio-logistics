@@ -1,71 +1,39 @@
 @media only screen and (max-width: 1400px) {
-  .hero h1 {
-    font-size: 122px;
-  }
-  .hero p {
-    margin-left: auto;
-    margin-right: -20px;
-    width: 410px;
-}
+ 
 }
 
 @media only screen and (max-width: 1200px) {
-  .topbar .button-container {
-    display: none;
-  }
-  .hero h1 {
-    font-size: 110px;
-}
-.hero .img-box .border-text {
-font-size: 180px;
-}
+ 
 }
 
 @media only screen and (max-width: 992px) {
-    .hero h1 {
-        font-size:80px;
-    }
-    .hero .img-box .border-text {
-        font-size: 145px;
-        letter-spacing: 18px;
-    }
+   
 }
 
 @media only screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 8vw;
-    }
-    .hero .img-box .border-text {
-        font-size: 11vw;
-        letter-spacing: 2vw;
-    }
+  
 }
 
 @media only screen and (max-width: 668px) {
-    .hero h1 {
-        font-size: 11vw;
-    }
-    .hero p {
-        margin-top: 30px;
-        font-size: 20px;
-        margin-right: 1px;
-    }
+  
 }
 
 @media only screen and (max-width: 600px) {
-    .topbar .content .menu button span {
-    width: 55px;
-    }
+  
 }
 
 @media only screen and (max-width: 580px) {
+  
 }
 
 @media only screen and (max-width: 480px) {
+  
 }
 
 @media only screen and (max-width: 380px) {
+  
 }
 
 @media only screen and (max-width: 340px) {
+  
 }
